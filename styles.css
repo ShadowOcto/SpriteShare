@@ -1,0 +1,181 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0c0c0c;
+    overflow-x: hidden;
+    color: white;
+}
+
+#title {
+    position: absolute;
+    font-size: 20px;
+    top: -5px;
+    left: 10px;
+}
+
+.tab {
+    position: absolute;
+    overflow: hidden;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.tab button {
+    transition: 0.1s ease-in-out;
+    background-color: inherit;
+    border: none;
+    border-bottom: rgba(0, 0, 0, 0) 2px solid;
+    border-radius: 5px;
+    float: left;
+    outline: none;
+    cursor: pointer;
+    padding: 5px 16px;
+    font-size: 17px;
+    color: white;
+    user-select: none;
+}
+
+.tab button:hover {
+    border-bottom: #323232 2px solid;
+    background-color: #0e0e0e;
+}
+
+.tab button.active {
+    border-bottom: blueviolet 5px solid;
+    background-color: #151515;
+    border-radius: 5px;
+}
+
+.tab-content {
+    position: absolute;
+    padding: 35px 12px;
+    border-top: none;
+    display: none;
+    grid-template-columns: repeat(5, 1fr);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/*horrible method of doing this*/
+@media screen and (max-width: 1800px) {
+    .tab-content {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .tab-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media screen and (max-width: 1000px) {
+    .tab-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .tab-content {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+.tab-content h2 {
+    text-align: center;
+}
+
+.container {
+    transition: background-color 0.5s ease-out, scale 0.5s ease-out;
+    background-color: #131313;
+    overflow: hidden;
+    border-radius: 20px;
+    height: 240px;
+    width: 300px;
+    margin: 10px;
+}
+
+.container:hover {
+    background-color: #191919;
+    scale: 102%;
+}
+.container:hover img {scale: 105%;}
+
+.container img {
+    transition: 0.3s ease-out;
+    width: 300px;
+}
+
+.container h3 {
+    position: relative;
+    left: 10px;
+    top: -8px;
+}
+
+.container p {
+    position: relative;
+    left: 10px;
+    top: -18px;
+    color: #a3a3a3;
+    text-wrap: nowrap;
+}
+
+.container .desc {
+    position: relative;
+    left: 10px;
+    top: -28px;
+    color: #777777;
+}
+
+.container button {
+    transition: background-color 0.3s ease-in-out, scale 0.3s ease-in-out;
+    cursor: pointer;
+    position: relative;
+    background-color: blueviolet;
+    left: calc(100% - 92px);
+    top: -30px;
+    border-radius: 10px;
+    color: white;
+    padding: 10px;
+    border: none;
+}
+
+.container button:hover {
+    background-color: #a758ef;
+    scale: 105%;
+}
+
+.verified {
+    position: relative;
+    background-color: rgba(167, 75, 255);
+    border-radius: 10px;
+    color: #ffffff;
+    width: max-content;
+    padding: 5px 10px;
+    scale: 80%;
+    left: 8px;
+    top: -62px;
+}
+
+.verified span {
+    position: relative;
+    top: -2px;
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-track {
+    background: #181818;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #2b2b2b;
+    border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
